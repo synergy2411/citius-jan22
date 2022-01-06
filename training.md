@@ -88,3 +88,14 @@ M - Modified tracked file
 > git push -u origin master : up-streaming
 
 > git clone <gitName>
+
+> git pull => git fetch + git merge
+
+
+
+
+
+
+
+
+
