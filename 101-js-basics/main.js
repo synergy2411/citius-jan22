@@ -137,29 +137,106 @@
   // Always present with collection
 
 // const display = ( email, age, ...args) => {
-//   console.log(args[0])      // ?
+//   for(let arg of args){
+//     if(typeof arg == "object"){
+//       console.log(arg.length)
+//     }
+//   }
 // }
 
 // // display("test@test.com")
 // // display("test@test.com", 32)
-// display("test@test.com", 32, true)
+// display("test@test.com", 32, true, [1,2,3,4])
 
 
-let numbers = [3,4,5];
+// let numbers = [3,4,5];
 
-let newNumbers = [1,2, ...numbers,6,7,8];
+// let newNumbers = [1,2, ...numbers,6,7,8];
 
-console.log(newNumbers);      // [ 1,2, [3,4,5], 6,7,8, ]
+// console.log(newNumbers);      // [ 1,2, [3,4,5], 6,7,8, ]
 
 
-let userOne = {
-  email : "test@test.com",
-  age : 32
-}
+// let userOne = {
+//   email : "test@test.com",
+//   age : 32
+// }
 
-let userTwo = {
-  ...userOne,
-  address : "201 Main Road"
-}
+// let userTwo = {
+//   ...userOne,
+//   address : "201 Main Road"
+// }
 
-console.log(userTwo);
+// console.log(userTwo);
+
+
+
+
+// Template Literals - " " | ' ' | ` ` (back tick)
+// - Write variables within string without ( + )
+// - Write multiline string without ( \n )
+
+// let username = "Foo";
+// let age = 32;
+
+// let str = `Hello from ${username},
+// I'm ${age} years old!
+// `
+
+// console.log(str);
+
+
+
+
+// Class
+
+// class Person{
+//   constructor(firstName, lastName){
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//   }
+//   getDetails = () => `Full Name : ${this.firstName} ${this.lastName}`;
+//   eats = () => `${this.firstName} eats when he is hungry`
+// }
+
+// class Student extends Person{
+//   static studId = "ST000";
+//   constructor(firstName, lastName){
+//     super(firstName, lastName);
+//     // this.studId = studId;
+//   }
+//   getDetails = () => `Full Name : ${Student.studId} - ${this.firstName} ${this.lastName}`;
+//   eats = () => `${this.firstName} eats in class as well`
+// }
+
+// let foo = new Student("Foo", "Bar", );
+// let baz = new Student("Baz", "Bam");
+// console.log(foo.getDetails())
+// console.log(baz.getDetails())
+// console.log(foo.eats())
+
+// Contructor Function
+// function Person (email , age){
+//   this.email = email;
+//   this.age = age;
+// }
+
+// let foo = new Person("foo@test.com", 32)
+// let bar = new Person("bar@test.com", 34)
+
+
+
+// Module System - "CommonJS" | ES6 Module System
+// require() : import the functionality from Modules
+// module.exports Keyword : :export the functionality
+
+// const maths = require("./maths")
+
+// console.log(maths.sum(2,4));
+
+// const {mul, sum, div} = require("./maths")
+
+// console.log("Multification : ", mul(2,4))
+
+const myForture = require("./fortune");
+
+alert("My Lucky Number today : ", myForture())

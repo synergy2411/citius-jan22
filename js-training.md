@@ -46,3 +46,18 @@ MEAN | MERN | MEVN
 Mongo Express Angular Node
 Mongo Express React Node
 Mongo Express Vue Node
+
+
+> node <filename>
+
+
+# Node installer
+- Node Package Manager (NPM)
+    : npmjs.com -> Node Packages -> 8L+
+- Node Runtime Environment (NRE/ REPL)
+- Node Native/Core Modules
+
+
+# JavaScript Types
+- Primitive Types : String, Numbers, Boolean
+- Reference Types : Object, Array, Function, Date
