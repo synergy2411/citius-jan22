@@ -237,6 +237,126 @@
 
 // console.log("Multification : ", mul(2,4))
 
-const myForture = require("./fortune");
+// const myForture = require("./fortune");
 
-alert("My Lucky Number today : ", myForture())
+// console.log("My Lucky Number today : ", myForture())
+
+
+
+// Map & Set
+
+// const map = new Map()
+
+// map.set("name", "John")
+// map.set("age", 32)
+// map.set(101, true)
+// map.set(true, "isAdmin");
+
+// let userOne = {name : "Foo"};
+
+// map.set(userOne, "User One");
+
+// console.log(map.get(101))
+// console.log(map.get(userOne))
+
+// for(let key of map.keys()){
+//   // console.log("value : ",  value)
+//   console.log("key : ",  key)
+// }
+
+// for(let [key, value] of map.entries()){
+//   console.log(`${JSON.stringify(key)} : ${value}`)
+// }
+
+
+// const set = new Set();
+
+// const userOne = { name : "Foo"}
+// const userTwo = { name : "Bar"}
+// const userThree = { name : "Bam"}
+
+// set.add(userOne)
+// set.add(userTwo)
+// set.add(userTwo)
+// set.add(userThree)
+// set.add(userThree)
+
+// console.log(set.size);    
+
+
+// Default/ optional Parameter
+// const demo = (username, age, friends = []) => {
+//   if(friends.length > 3){
+
+//   }else{
+
+//   }
+// }
+
+// demo("Foo", 32)
+
+
+
+
+
+// Promsie 
+// - Handle JS Asynchronous Behaviour
+// - handshake between the producer code and consumer code
+// - Two State - Success (resolve) / Failure (reject)
+// - Consume Promise -> .then().catch() | Async...Await with try...catch
+
+
+
+// Producer Code
+const demoPromise = (arr) => {
+  const promise = new Promise((resolve, reject) =>{
+    if(arr.length > 2){
+      setTimeout(() => {
+        resolve("Data arrived...")
+      }, 3000)
+    }else{
+      reject(new Error("Too low values"))
+    }
+  });
+  return promise;
+}
+
+// Consumer Code
+const callDemoPromise = async () => {
+  try{
+    const result = await demoPromise([1,2])
+    console.log("REsult : ", result)
+    console.log("End")
+  }catch(err){
+    console.log(err)
+  }
+}
+
+callDemoPromise();
+
+
+
+
+// demoPromise([1,2,3])
+//   .then(result => {
+//     console.log("Promise Resolved : ", result)
+//     console.log("End")
+//   }).catch(err => {
+//     console.log("ERROR - ", err)
+//   })
+
+
+
+
+
+
+
+
+// console.log("Start")
+// setTimeout(() => {
+//   console.log("3 seconds passed...")
+// }, 0)
+// setTimeout(() => {
+//   console.log("5 seconds passed...")
+// }, 0)
+// console.log("End")

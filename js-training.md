@@ -15,7 +15,7 @@ ES2015+ feature -
 - ES6 Module System
 - Map / Set
 - Promise
-- Default / Operational Parameter
+- Default / Optional Parameter
 
 
 JavaScript Code 
