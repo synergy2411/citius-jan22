@@ -76,7 +76,14 @@ var Size;
     Size["BIG"] = "BIG";
     Size["SMALL"] = "SMALL";
 })(Size || (Size = {}));
+// Constructor Injection
 var Cat = /** @class */ (function () {
+    // private size : Size;
+    // private breed : string;
+    // constructor(size : Size, breed : string){
+    //     this.size = size;
+    //     this.breed = breed;
+    // }
     function Cat(size, breed) {
         this.size = size;
         this.breed = breed;
@@ -86,5 +93,5 @@ var Cat = /** @class */ (function () {
     };
     return Cat;
 }());
-var tiger = new Cat(Size.BIG, "Tiger");
+var tiger = new Cat(Size.SMALL, "CAT");
 tiger.walk();

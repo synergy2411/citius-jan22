@@ -121,17 +121,20 @@ enum Size {
     SMALL = "SMALL"
 }
 
+// Constructor Injection
 class Cat{
-    private size : Size;
-    private breed : string;
-    constructor(size : Size, breed : string){
-        this.size = size;
-        this.breed = breed;
-    }
+    // private size : Size;
+    // private breed : string;
+    // constructor(size : Size, breed : string){
+    //     this.size = size;
+    //     this.breed = breed;
+    // }
+    constructor(private size : Size, private breed : string){}
+
     walk(){
-        console.log(`This is ${this.size} ${this.breed} Cat, waling on street!!! `)
+        console.log(`This is ${this.size} ${this.breed} Cat, walking on street!!! `)
     }
 }
-let tiger = new Cat(Size.BIG, "Tiger");
+let tiger = new Cat(Size.SMALL, "CAT");
 tiger.walk();
 

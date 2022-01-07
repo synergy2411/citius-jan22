@@ -61,3 +61,9 @@ Mongo Express Vue Node
 # JavaScript Types
 - Primitive Types : String, Numbers, Boolean
 - Reference Types : Object, Array, Function, Date
+
+
+
+> npm install -g typescript
+> tsc --version
+> tsc app.ts
