@@ -1,2 +1,8 @@
-let x : string = "Some String 123";
-console.log(x);
+window.onload = () => {
+    const btnClick = document.getElementById("btnClick") as HTMLButtonElement;
+
+    btnClick.addEventListener("click", (event : Event) => {
+        event.preventDefault();
+        alert("Who's this?")
+    })
+}

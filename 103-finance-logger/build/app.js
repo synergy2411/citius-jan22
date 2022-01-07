@@ -1,3 +1,8 @@
 "use strict";
-let x = "Some String 123";
-console.log(x);
+window.onload = () => {
+    const btnClick = document.getElementById("btnClick");
+    btnClick.addEventListener("click", (event) => {
+        event.preventDefault();
+        alert("Who's this?");
+    });
+};

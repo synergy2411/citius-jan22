@@ -74,3 +74,6 @@ Mongo Express Vue Node
 
 # Generating package.json file
 > npm init
+> npm run compile
+
+> npm install bootstrap@4

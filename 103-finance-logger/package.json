@@ -4,8 +4,11 @@
   "description": "Awesome Finance logger",
   "main": "app.js",
   "scripts": {
-    "compile" : "tsc --watch"
+    "compile": "tsc --watch"
   },
   "author": "SumitK",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.6.1"
+  }
 }
