@@ -67,3 +67,10 @@ Mongo Express Vue Node
 > npm install -g typescript
 > tsc --version
 > tsc app.ts
+
+# Generate tsconfig.json file in project
+> npx tsc --init 
+
+
+# Generating package.json file
+> npm init
