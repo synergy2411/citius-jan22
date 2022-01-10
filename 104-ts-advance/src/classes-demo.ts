@@ -44,22 +44,23 @@
 
 // Abstract classes
 
-// abstract class Fighter {
-//     abstract fight() : string;
-//     move(){
-//         console.log("Kicking")
-//     }
-// }
+abstract class Fighter {
+    abstract fight() : string;
+    move(){
+        console.log("Kicking")
+    }
+}
 
-// class Ryu extends Fighter{
-//     fight(): string {
-//         return 'Lightening Kick';
-//     }
-// }
+class Ryu extends Fighter{
+    fight(): string {
+        super.move()
+        return 'Lightening Kick ';
+    }
+}
 
-// let ryu = new Ryu();
-// console.log(ryu.fight())
-// ryu.move()
+let ryu = new Ryu();
+console.log(ryu.fight())
+ryu.move()
 
 
 
