@@ -1,8 +1,9 @@
 window.onload = () => {
-    const btnClick = document.getElementById("btnClick") as HTMLButtonElement;
+    const btnAdd = document.querySelector("#btnAdd") as HTMLButtonElement
+    const selType = document.querySelector("#selType") as HTMLSelectElement
 
-    btnClick.addEventListener("click", (event : Event) => {
+    btnAdd.addEventListener("click", (event : Event)=>{
         event.preventDefault();
-        alert("Who's this?")
+        console.log(selType.value)
     })
 }

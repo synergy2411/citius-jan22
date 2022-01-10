@@ -1,8 +1,9 @@
 "use strict";
 window.onload = () => {
-    const btnClick = document.getElementById("btnClick");
-    btnClick.addEventListener("click", (event) => {
+    const btnAdd = document.querySelector("#btnAdd");
+    const selType = document.querySelector("#selType");
+    btnAdd.addEventListener("click", (event) => {
         event.preventDefault();
-        alert("Who's this?");
+        console.log(selType.value);
     });
 };
