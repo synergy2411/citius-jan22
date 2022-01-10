@@ -5,6 +5,9 @@ export class Payment {
         this.amount = amount;
     }
     format() {
-        return `Amount ${'$' + this.amount} to be paid for ${this.title}`;
+        const day = this.createdAt.toLocaleString("en-US", { day: 'numeric' });
+        const month = this.createdAt.toLocaleString("en-US", { month: 'long' });
+        const year = this.createdAt.getFullYear();
+        return `${month} ${day}, ${year} - Amount ${'$' + this.amount} to be paid for ${this.title}`;
     }
 }
