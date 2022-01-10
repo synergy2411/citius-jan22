@@ -1,49 +1,7 @@
-// import { Invoice } from './classes/invoice';
-// import { Payment } from './classes/payment';
-
-interface HasFormatter{
-    format : () => string;
-}
-
-class Payment implements HasFormatter{
-    constructor(
-        private title : string,
-        private createdAt : Date,
-        private amount : number
-        ){}
-    format(){
-        return `Amount ${'$'+this.amount} to be paid for ${this.title}`
-    }
-}
-
-class Invoice implements HasFormatter{
-    constructor(
-      private title: string,
-      private createdAt: Date,
-      private amount: number
-    ) {}
-  
-    format(){
-        return `Amount ${'$'+this.amount} to be charge for ${this.title}`
-    }
-  
-  }
-
-  class ListTemplate{
-      constructor(private container : HTMLUListElement){}
-      render(item : HasFormatter, heading : string){
-          const li = document.createElement("li");
-          li.className="list-group-item";
-          const h5 = document.createElement("h5");
-          h5.className = "float-right";
-          h5.innerHTML= heading.toUpperCase();
-          li.append(h5);
-          const p = document.createElement("p");
-          p.innerHTML = item.format();
-          li.append(p);
-          this.container.append(li);
-      }
-  }
+import { Invoice } from './classes/invoice.js';
+import { Payment } from './classes/payment.js';
+import { HasFormatter } from './model/hasFormat.js';
+import { ListTemplate } from './classes/list-template.js';
 
 window.onload = () => {
     const btnAdd = document.querySelector("#btnAdd") as HTMLButtonElement
