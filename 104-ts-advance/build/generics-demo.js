@@ -1,4 +1,3 @@
-"use strict";
 // type numberarray = Array<number>;
 // let numbers : numberarray = [1,2,3,4];
 var resoucre = {

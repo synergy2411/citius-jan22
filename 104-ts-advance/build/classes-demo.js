@@ -1,4 +1,3 @@
-"use strict";
 // Access Modifiers -> private | public | protected
 // Getter / Setter
 var __extends = (this && this.__extends) || (function () {

@@ -31,7 +31,7 @@
 
 
 
-
+// Generic with constraints
 // interface Person {
 //     firstName : string; 
 //     lastName : string;
