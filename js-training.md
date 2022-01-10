@@ -77,3 +77,17 @@ Mongo Express Vue Node
 > npm run compile
 
 > npm install bootstrap@4
+
+
+# Angular Decorators
+- Class : @Component({}) | @Directive({}) | @Pipe({}) | @Injectable({}) | @NgModule({})
+- Method : @HostListener({})
+- Property : @HostBinding({}) | @Input() | @Output()
+- Parameter : @Inject() | @Optional
+
+# Angular Building Blocks
+- Component
+- Directives
+- Pipes
+- Services
+- Modules
