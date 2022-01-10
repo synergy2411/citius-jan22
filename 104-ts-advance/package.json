@@ -1,0 +1,12 @@
+{
+  "name": "104-ts-advance",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile" : "tsc --watch"
+  },
+  "keywords": [],
+  "author": "SumitK",
+  "license": "ISC"
+}
