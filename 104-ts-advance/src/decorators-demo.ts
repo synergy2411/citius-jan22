@@ -58,48 +58,63 @@
 
 
 // PROPERTY LEVEL DECORATOR
-// function Prop(target : Object, key : string){
-//     let value : string = "Default Name";
-//     const getter = () => value;
-//     const setter = (newValue) => {
-//         console.log("Setting value to ", value)
-//         value = newValue;
-//     }
-//     Object.defineProperty(target, key, {
-//         get : getter,
-//         set : setter,
-//         configurable : true,
-//         writable: true
-//     })
-// }
+function Prop(target : Object, key : string){
+    let value : string = "Default Name";
+    const getter = () => value;
+    const setter = (newValue) => {
+        console.log("Setting value to ", value)
+        value = newValue;
+    }
+    Object.defineProperty(target, key, {
+        get : getter,
+        set : setter,
+        configurable : true,
+        writable: true
+    })
+}
+function Prop2(target : Object, key : string){
+    let value : string = "Default Name";
+    const getter = () => value;
+    const setter = (newValue) => {
+        console.log("Setting value to ", value)
+        value = newValue;
+    }
+    Object.defineProperty(target, key, {
+        get : getter,
+        set : setter,
+        configurable : true,
+        writable: true
+    })
+}
 
-// class Human{
-//     @Prop
-//     name : string;
-// }
-// let foo = new Human();
-// console.log(foo.name);
-// foo.name = "Foo Bar";
-// console.log(foo.name);
+class Human{
+    @Prop
+    @Prop2
+    name : string;
+}
+let foo = new Human();
+console.log(foo.name);
+foo.name = "Foo Bar";
+console.log(foo.name);
 
 
 
 
 // PARAMETER LEVEL DECORATOR
 
-// function Param(target : Object, key : string, index : number){
-//     console.log("Key : ", key);
-//     console.log("Index : ", index);
-// }
+function Param(target : Object, key : string, index : number){
+    console.log("Key : ", key);
+    console.log("Index : ", index);
+}
 
-// class User{
-//     sayHello(@Param username : string){
-//         console.log("Hello " + username);
-//     }
-// }
+class User{
+    sayHello(@Param username : string){
+        console.log("Hello " + username);
+    }
+}
 
-// let u1 = new User();
-// u1.sayHello("Foo");
+let u1 = new User();
+u1.sayHello("Foo");
 
 
 

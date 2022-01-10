@@ -1,5 +1,14 @@
 // Decorators - Simple Functions for meta-programming; prefixed with '@'
 // Can be applied on Class, Properties, Methods, Parameters
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
 // CLASS LEVEL DECORATOR
 // function Component(target : Function){
 //     target.prototype.id = "N1099";
@@ -42,37 +51,62 @@
 // let ninja = new Ninja();
 // console.log(ninja.printNinja("Yellow Belt Ninja"))
 // PROPERTY LEVEL DECORATOR
-// function Prop(target : Object, key : string){
-//     let value : string = "Default Name";
-//     const getter = () => value;
-//     const setter = (newValue) => {
-//         console.log("Setting value to ", value)
-//         value = newValue;
-//     }
-//     Object.defineProperty(target, key, {
-//         get : getter,
-//         set : setter,
-//         configurable : true,
-//         writable: true
-//     })
-// }
-// class Human{
-//     @Prop
-//     name : string;
-// }
-// let foo = new Human();
-// console.log(foo.name);
-// foo.name = "Foo Bar";
-// console.log(foo.name);
+function Prop(target, key) {
+    var value = "Default Name";
+    var getter = function () { return value; };
+    var setter = function (newValue) {
+        console.log("Setting value to ", value);
+        value = newValue;
+    };
+    Object.defineProperty(target, key, {
+        get: getter,
+        set: setter,
+        configurable: true,
+        writable: true
+    });
+}
+function Prop2(target, key) {
+    var value = "Default Name";
+    var getter = function () { return value; };
+    var setter = function (newValue) {
+        console.log("Setting value to ", value);
+        value = newValue;
+    };
+    Object.defineProperty(target, key, {
+        get: getter,
+        set: setter,
+        configurable: true,
+        writable: true
+    });
+}
+var Human = /** @class */ (function () {
+    function Human() {
+    }
+    __decorate([
+        Prop,
+        Prop2
+    ], Human.prototype, "name", void 0);
+    return Human;
+}());
+var foo = new Human();
+console.log(foo.name);
+foo.name = "Foo Bar";
+console.log(foo.name);
 // PARAMETER LEVEL DECORATOR
-// function Param(target : Object, key : string, index : number){
-//     console.log("Key : ", key);
-//     console.log("Index : ", index);
-// }
-// class User{
-//     sayHello(@Param username : string){
-//         console.log("Hello " + username);
-//     }
-// }
-// let u1 = new User();
-// u1.sayHello("Foo");
+function Param(target, key, index) {
+    console.log("Key : ", key);
+    console.log("Index : ", index);
+}
+var User = /** @class */ (function () {
+    function User() {
+    }
+    User.prototype.sayHello = function (username) {
+        console.log("Hello " + username);
+    };
+    __decorate([
+        __param(0, Param)
+    ], User.prototype, "sayHello", null);
+    return User;
+}());
+var u1 = new User();
+u1.sayHello("Foo");
