@@ -91,3 +91,11 @@ Mongo Express Vue Node
 - Pipes
 - Services
 - Modules
+
+
+# IIFE -> Immediately Invoked Function Expression
+(function(){})()
+
+# to create bundle file for namespace
+> tsc --outfile bundle.js src/namespaces/app.ts src/namespaces/utils.ts
+> node bundle.js
