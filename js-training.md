@@ -180,3 +180,15 @@ html
 
 
 - npm run build
+
+
+# View Encapsulation
+- Emulated - Local First then Global CSS
+- Shadow DOM - Restricted Local CSS
+- None - Local CSS affects other Components
+
+
+Comp1 -> None
+Comp2 -> ShadowDOM 
+
+Shadow DOM - Part of Your Actual DOM; Encapsulation
