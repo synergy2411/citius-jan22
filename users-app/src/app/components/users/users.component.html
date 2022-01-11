@@ -3,9 +3,16 @@
 <ul>
   <li>
     <img [src]="user.imagePath">
+    <button (click)="onMoreInfo(user.lastName, user.company)">More Info</button>
+
     <h5>{{ user.firstName }} {{ user.lastName }}</h5>
     <p>Income : <span [innerText]="user.income"></span> </p>
     <p>Date of Birth : <span [innerHTML]="user.dob"></span> </p>
+    <p>Total Vaotes : {{ user.votes }}
+      <input type="number" [value]="user.votes" (change)="user.votes = $event.target.value">
+      <input type="number" [(ngModel)]="user.votes">
+
+    </p>
   </li>
 </ul>
 

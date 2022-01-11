@@ -15,6 +15,11 @@ export class UsersComponent{
     isWorking : true,
     income : 50000,
     company : "Microsoft",
-    imagePath : "./assets/images/bill.jpeg"
+    imagePath : "./assets/images/bill.jpeg",
+    votes : 130
+  }
+
+  onMoreInfo(lastName : string, company : string){
+    alert(`Mr. ${lastName} is working with ${company}`)
   }
 }
