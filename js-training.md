@@ -177,3 +177,6 @@ html
 # AOT - Ahead of Time Compiler
 - Tree-shaking : remove unused code from app; App size can be reduced by 40%
 - loading App quicker
+
+
+- npm run build

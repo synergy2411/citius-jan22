@@ -13,6 +13,6 @@ import { UsersComponent } from './components/users/users.component';
     BrowserModule
   ],
   providers: [],      // Service Registration
-  bootstrap: [AppComponent, UsersComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
