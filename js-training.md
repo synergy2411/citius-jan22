@@ -99,3 +99,81 @@ Mongo Express Vue Node
 # to create bundle file for namespace
 > tsc --outfile bundle.js src/namespaces/app.ts src/namespaces/utils.ts
 > node bundle.js
+
+
+
+
+
+
+
+
+
+
+
+# What is Angular ?
+- Super heroic Framework
+- UI Framework
+- developed by Google
+- SPA apps
+- Built-in features
+- Client-side MVC Architecture
+- Integration of Third-party lib
+- Great Community Support
+- New Version arrives in every 6 month
+- Shadow DOM
+
+# Other Framework and Libraries
+- Angular v2 Oct'2014 : Latest Version, Framework
+- AngularJS v1 : 2011; Library
+- React - Client-side JS Library to create UI; update the UI efficiently; Virtual DOM (JavaScript); Diffing Algorithm; Facebook Team; Great Community Support; SPA - react-router; State Management - react-redux; Form Validation - formik
+- Vue - Template Oriented; Virtual DOM; Evan You; Evolving
+- jQuery - DOM Manipulation, Animation, Ajax Calls
+- Knockout - Two way data binding; MVVM Pattern
+- Backbone - Client-side MVC
+- Stencil - Create Custom Components
+- **Ember - Framework; Frequent API changes;
+- *Next - Full Stack App
+- *Express - Web App framework for Node Platform
+- *Node - Platform
+- *Sails - Web app Framework
+- *Kraken - Web App Framework
+
+
+# What is DOM - Hierarchical representation of HTML 
+html
+    head
+        title
+        script
+        meta
+    body
+        div
+            image
+        p
+
+<product-detail></product-detail>
+<user-details></user-details>
+<div></div>
+<p></p>
+
+
+
+# to install Angular CLI Tool
+> npm install -g @angular/cli@11
+> ng --version
+> ng new <project-name>
+> ng new users-app
+> cd users-app
+> ng serve --open
+
+> cd users-app
+> npm install --force
+
+> npm config rm proxy
+> npm config rm https-proxy
+> npm install --force
+
+> npm run start | ng serve
+
+# AOT - Ahead of Time Compiler
+- Tree-shaking : remove unused code from app; App size can be reduced by 40%
+- loading App quicker
