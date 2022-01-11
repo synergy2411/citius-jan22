@@ -1,4 +1,12 @@
-<h2>New Heading Tag</h2>
+<h4>Users App</h4>
 
-<h4>Hello from Users component</h4>
+<ul>
+  <li>
+    <img [src]="user.imagePath">
+    <h5>{{ user.firstName }} {{ user.lastName }}</h5>
+    <p>Income : <span [innerText]="user.income"></span> </p>
+    <p>Date of Birth : <span [innerHTML]="user.dob"></span> </p>
+  </li>
+</ul>
 
+<!-- div, p, list,  -->

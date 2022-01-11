@@ -192,3 +192,12 @@ Comp1 -> None
 Comp2 -> ShadowDOM 
 
 Shadow DOM - Part of Your Actual DOM; Encapsulation
+
+
+# Angular CLI Commands
+- ng generate component path/to/component/componentName
+- ng g c componentName
+- ng g d directiveName
+- ng g p pipeName
+- ng g s serviceName
+- ng g m moduleName
