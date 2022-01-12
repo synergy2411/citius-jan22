@@ -1,4 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import { User } from 'src/app/model/user.model';
 
 
 @Component({
@@ -8,7 +9,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
   encapsulation : ViewEncapsulation.Emulated
 })
 export class UsersComponent{
-  user = {
+  user : User = {
     firstName : "bill",
     lastName : "gates",
     dob : new Date("Dec 21, 1965"),

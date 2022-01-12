@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { User } from 'src/app/model/user.model';
 
 @Component({
   selector: 'app-user-info',
@@ -7,9 +8,9 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class UserInfoComponent {
   @Input()
-   user : any;
+   user : User;
 
    changeUserVotes(event : {target : HTMLInputElement}){
-     this.user = event.target.value
+     this.user.votes = Number(event.target.value)
    }
 }
