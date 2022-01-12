@@ -7,17 +7,9 @@
         <app-user-image [user]="user"></app-user-image>
       </div>
       <div class="col-8">
-        <h5>{{ user.firstName }} {{ user.lastName }}</h5>
-        <p>Income : <span [innerText]="user.income"></span> </p>
-        <p>Date of Birth : <span [innerHTML]="user.dob"></span> </p>
-        <p>Total Votes : {{ user.votes }}
-          <input type="number" [value]="user.votes"
-            (change)="user.votes = $event.target.value">
-          <input type="number" [(ngModel)]="user.votes">
-        </p>
+       <app-user-info [user]="user"></app-user-info>
       </div>
     </div>
-
   </li>
 </ul>
 
