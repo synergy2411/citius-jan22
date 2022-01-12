@@ -4,7 +4,8 @@
   <li class="list-group-item">
     <div class="row">
       <div class="col-4 text-center">
-        <app-user-image [user]="user"></app-user-image>
+        <app-user-image [user]="user"
+          (childEvent)="onMoreInfo($event.lastName, $event.company)"></app-user-image>
       </div>
       <div class="col-8">
        <app-user-info [user]="user"></app-user-info>
