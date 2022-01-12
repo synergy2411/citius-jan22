@@ -220,3 +220,15 @@ users-app> ng g c components/users/user-image
 
 user-image
 user-info
+
+
+# Component Types
+- Smart : contains business logic for associated template
+- Dump : Does not contain business logic
+
+- Parent / Container : contains other component
+- Child / Presentational : receives the data from parent, create the UI
+
+- users comp : Parent / Container / Smart
+- user-image : Child / Presentational / Dump
+- user-info : Child / Presentational / Dump
