@@ -8,3 +8,4 @@ export interface User{
   imagePath : string;
   votes : number;
 }
+

@@ -1,6 +1,6 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { User } from 'src/app/model/user.model';
-
+import { USER_DATA } from '../../model/mocks';
 
 @Component({
   selector : "app-users",
@@ -8,16 +8,13 @@ import { User } from 'src/app/model/user.model';
   styleUrls : [`./users.component.css`],
   encapsulation : ViewEncapsulation.Emulated
 })
-export class UsersComponent{
-  user : User = {
-    firstName : "bill",
-    lastName : "gates",
-    dob : new Date("Dec 21, 1965"),
-    isWorking : true,
-    income : 50000,
-    company : "Microsoft",
-    imagePath : "./assets/images/bill.jpeg",
-    votes : 130
+export class UsersComponent implements OnInit{
+  user : User;
+
+  constructor(){}
+
+  ngOnInit(): void {
+      this.user = USER_DATA;
   }
 
   onMoreInfo(lastName : string, company : string){
