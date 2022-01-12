@@ -1,8 +1,16 @@
+<ng-content select="header"></ng-content>
 <h5>{{ user.firstName }} {{ user.lastName }}</h5>
 <p>Income : <span [innerText]="user.income"></span> </p>
 <p>Date of Birth : <span [innerHTML]="user.dob"></span> </p>
 <p>Total Votes : {{ user.votes }}
   <input type="number" [value]="user.votes"
-    (change)="user.votes = $event.target.value">
+    (change)="changeUserVotes($event)">
   <input type="number" [(ngModel)]="user.votes">
 </p>
+
+<ng-content></ng-content>
+
+<ng-content select=".main-content"></ng-content>
+<!-- <ng-content select=".main-content"></ng-content> -->
+
+<!-- <ng-content select="footer"></ng-content> -->

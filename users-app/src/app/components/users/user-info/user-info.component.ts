@@ -8,4 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
 export class UserInfoComponent {
   @Input()
    user : any;
+
+   changeUserVotes(event : {target : HTMLInputElement}){
+     this.user = event.target.value
+   }
 }

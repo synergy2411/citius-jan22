@@ -173,6 +173,7 @@ html
 > npm install --force
 
 > npm run start | ng serve
+> ng serve --ssl
 
 # AOT - Ahead of Time Compiler
 - Tree-shaking : remove unused code from app; App size can be reduced by 40%
@@ -201,3 +202,21 @@ Shadow DOM - Part of Your Actual DOM; Encapsulation
 - ng g p pipeName
 - ng g s serviceName
 - ng g m moduleName
+
+# Bootstrap Library 
+- CSS Classes
+- npm install bootstrap@4
+
+
+users-app> ng g c components/users/user-image
+
+
+# Atomic Design
+- Atom : One button, one input field etc
+- Molecule : Combo of Atom. eg. Searchbar -> input field + Button
+- Organism : Combo of Molecules ; eg. navbar =>  Searchbar + Links
+- Template : Combo of Organism; e.g form
+- Page : Complete Page
+
+user-image
+user-info

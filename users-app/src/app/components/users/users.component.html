@@ -8,7 +8,14 @@
           (childEvent)="onMoreInfo($event.lastName, $event.company)"></app-user-image>
       </div>
       <div class="col-8">
-       <app-user-info [user]="user"></app-user-info>
+       <app-user-info [user]="user">
+         <header>Header Info here</header>
+         <main class="main-content">
+          {{ user.firstName }}   {{user.lastName}}
+        </main>
+         <aside>Side bar info</aside>
+         <footer>Footer Info here</footer>
+       </app-user-info>
       </div>
     </div>
   </li>

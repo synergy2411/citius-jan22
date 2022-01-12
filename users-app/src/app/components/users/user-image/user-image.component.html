@@ -1,8 +1,13 @@
 <img [src]="user.imagePath" class="img-fluid rounded-circle" />
 <br />
+
+<!-- <my-button (btnClick)="onBtnClick()">More Info</my-button> -->
+<my-button (btnClick)="onBtnClick()" [txtButton]="'More Info'"></my-button>
+
+<!--
 <button
   class="btn btn-info btn-sm btn-block"
   (click)="onBtnClick()"
 >
   More Info
-</button>
+</button> -->
