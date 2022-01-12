@@ -1,18 +1,23 @@
 <h4>Users App</h4>
 
-<ul>
-  <li>
-    <img [src]="user.imagePath">
-    <button (click)="onMoreInfo(user.lastName, user.company)">More Info</button>
+<ul class="list-group">
+  <li class="list-group-item">
+    <div class="row">
+      <div class="col-4 text-center">
+        <app-user-image [user]="user"></app-user-image>
+      </div>
+      <div class="col-8">
+        <h5>{{ user.firstName }} {{ user.lastName }}</h5>
+        <p>Income : <span [innerText]="user.income"></span> </p>
+        <p>Date of Birth : <span [innerHTML]="user.dob"></span> </p>
+        <p>Total Votes : {{ user.votes }}
+          <input type="number" [value]="user.votes"
+            (change)="user.votes = $event.target.value">
+          <input type="number" [(ngModel)]="user.votes">
+        </p>
+      </div>
+    </div>
 
-    <h5>{{ user.firstName }} {{ user.lastName }}</h5>
-    <p>Income : <span [innerText]="user.income"></span> </p>
-    <p>Date of Birth : <span [innerHTML]="user.dob"></span> </p>
-    <p>Total Vaotes : {{ user.votes }}
-      <input type="number" [value]="user.votes" (change)="user.votes = $event.target.value">
-      <input type="number" [(ngModel)]="user.votes">
-
-    </p>
   </li>
 </ul>
 
