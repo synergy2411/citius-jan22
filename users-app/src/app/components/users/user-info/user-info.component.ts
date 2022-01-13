@@ -10,6 +10,8 @@ export class UserInfoComponent {
   @Input()
    user : User;
 
+   tab : number = 0;
+
    changeUserVotes(event : {target : HTMLInputElement}){
      this.user.votes = Number(event.target.value)
    }
