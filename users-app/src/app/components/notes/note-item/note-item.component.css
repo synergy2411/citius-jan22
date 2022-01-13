@@ -1,0 +1,8 @@
+.my-class{
+  transition: all 0.3s ease-in;
+}
+
+.my-class:hover{
+  cursor: pointer;
+  background-color: lightgray;
+}

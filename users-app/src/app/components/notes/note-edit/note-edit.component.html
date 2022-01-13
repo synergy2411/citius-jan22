@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="card-header">
+    <h5 class="text-center">{{note.text.toUpperCase()}}</h5>
+  </div>
+  <div class="card-body">
+    <input type="text" [(ngModel)]="note.text" class="form-control">
+    <br>
+    <div class="row">
+      <div class="col-6">
+        <button class="btn btn-danger btn-block btn-sm"
+          (click)="onDelete()">DELETE</button>
+      </div>
+      <div class="col-6">
+        <button class="btn btn-warning btn-block btn-sm"
+          (click)="onEdit()">EDIT</button>
+      </div>
+    </div>
+  </div>
+</div>

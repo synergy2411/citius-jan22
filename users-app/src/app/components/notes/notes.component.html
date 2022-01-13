@@ -1,0 +1,22 @@
+<p class="display-4 text-center">Notes Component</p>
+
+<div class="row">
+
+<app-note-item *ngFor="let note of notes"
+  [note]="note" class="col-6"
+  (noteSelectEvent)="onSelectNote($event)"></app-note-item>
+<!--
+<app-note-item [note]="notes[1]" class="col-6" (noteSelectEvent)="onSelectNote($event)"></app-note-item>
+<app-note-item [note]="notes[2]" class="col-6" (noteSelectEvent)="onSelectNote($event)"></app-note-item>
+<app-note-item [note]="notes[3]" class="col-6" (noteSelectEvent)="onSelectNote($event)"></app-note-item> -->
+</div>
+
+<hr>
+
+<div class="row" *ngIf="showNoteEditComp">
+  <div class="col-6 offset-3">
+    <app-note-edit [note] = "selectedNote"
+      (onDeleteEvent)="deleteNote($event)"
+      (onEditEvent)="editNote($event)"></app-note-edit>
+  </div>
+</div>

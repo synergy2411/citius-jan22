@@ -8,6 +8,9 @@ import { UserImageComponent } from './components/users/user-image/user-image.com
 import { UserInfoComponent } from './components/users/user-info/user-info.component';
 import { ButtonComponent } from './components/button/button.component';
 import { LifeCycleDemoComponent } from './components/life-cycle-demo/life-cycle-demo.component';
+import { NotesComponent } from './components/notes/notes.component';
+import { NoteItemComponent } from './components/notes/note-item/note-item.component';
+import { NoteEditComponent } from './components/notes/note-edit/note-edit.component';
 
 @NgModule({
   declarations: [     // Component / Directive / Pipe
@@ -16,7 +19,10 @@ import { LifeCycleDemoComponent } from './components/life-cycle-demo/life-cycle-
     UserImageComponent,
     UserInfoComponent,
     ButtonComponent,
-    LifeCycleDemoComponent
+    LifeCycleDemoComponent,
+    NotesComponent,
+    NoteItemComponent,
+    NoteEditComponent
   ],
   imports: [          // Modules - Built-in or Custom
     BrowserModule,
