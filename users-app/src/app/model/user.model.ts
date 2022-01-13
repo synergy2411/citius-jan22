@@ -1,3 +1,5 @@
+import { Comment } from "./comment.model";
+
 export interface User{
   firstName : string;
   lastName : string;
@@ -7,5 +9,6 @@ export interface User{
   company : string;
   imagePath : string;
   votes : number;
+  comments : Comment[]
 }
 

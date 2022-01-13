@@ -8,7 +8,11 @@ export const USER_DATA : User[] = [{
   income : 50000,
   company : "Microsoft",
   imagePath : "./assets/images/bill.jpeg",
-  votes : 130
+  votes : 130,
+  comments : [
+    {stars : 5, body : "Great work", author : "test@test.com"},
+    {stars : 4, body : "Well done", author : "foo@test.com"},
+  ]
 },{
   firstName : "steve",
   lastName : "jobs",
@@ -17,7 +21,8 @@ export const USER_DATA : User[] = [{
   income : 0,
   company : "Apple",
   imagePath : "./assets/images/steve.jpeg",
-  votes : 170
+  votes : 170,
+  comments : []
 },{
   firstName : "tim b.",
   lastName : "lee",
@@ -26,6 +31,9 @@ export const USER_DATA : User[] = [{
   income : 40000,
   company : "World Wide Web",
   imagePath : "./assets/images/tim.jpeg",
-  votes : 120
+  votes : 120,
+  comments : [
+    {stars : 4, body : "Nicely done", author: "test@test.com"}
+  ]
 }
 ]

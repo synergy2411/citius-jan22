@@ -22,7 +22,22 @@
 </ul>
 
 <div [ngSwitch]="tab">
-  <div *ngSwitchCase="1">Show All Comment</div>
+  <div *ngSwitchCase="1">
+
+    <ul class="list-group" *ngIf="user.comments.length > 0; else noComment">
+      <li *ngFor="let comment of user.comments" class="list-group-item">
+        <blockquote>
+          <strong>Stars : {{ comment.stars }}</strong>
+          {{comment.body}}
+          <cite>-{{comment.author}}</cite>
+        </blockquote>
+      </li>
+    </ul>
+    <ng-template #noComment>
+      <p>Be the first to Comment.</p>
+    </ng-template>
+
+  </div>
   <div *ngSwitchCase="2">Add New Form coming soon...</div>
   <div *ngSwitchDefault>Select any above mentioned tab</div>
 </div>
