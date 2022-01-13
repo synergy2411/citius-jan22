@@ -15,6 +15,7 @@ import { CommentItemComponent } from './components/users/comment-item/comment-it
 import { AddCommentComponent } from './components/users/add-comment/add-comment.component';
 import { DirectiveDemoComponent } from './components/directive-demo/directive-demo.component';
 import { HighlightDirective } from './directives/highlight.directive';
+import { UnlessDirective } from './directives/unless.directive';
 
 @NgModule({
   declarations: [     // Component / Directive / Pipe
@@ -30,7 +31,8 @@ import { HighlightDirective } from './directives/highlight.directive';
     CommentItemComponent,
     AddCommentComponent,
     DirectiveDemoComponent,
-    HighlightDirective
+    HighlightDirective,
+    UnlessDirective
   ],
   imports: [          // Modules - Built-in or Custom
     BrowserModule,

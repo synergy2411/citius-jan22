@@ -1,19 +1,21 @@
-import { Directive, ElementRef, HostBinding, HostListener } from '@angular/core';
+import { Directive, ElementRef, HostBinding, HostListener, Input } from '@angular/core';
 
 @Directive({
   selector : '[app-highlight]'
 })
 export class HighlightDirective{
 
-  @HostBinding('style.backgroundColor') bgColor : any;
+  @Input() favColor : string;
+  @HostBinding('style.backgroundColor') bgColor : any = 'transparent';
+  @HostBinding('style.fontSize') fontSize : any;
 
   @HostListener('mouseenter')
-  mouseneter(){
-    this.bgColor = 'aqua';
+  onMouseEnter(){
+    this.bgColor = this.favColor;
   }
 
   @HostListener('mouseleave')
-  mouseleave(){
+  onMouseLeave(){
     this.bgColor = 'transparent';
   }
 

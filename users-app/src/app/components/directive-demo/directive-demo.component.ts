@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectiveDemoComponent implements OnInit {
 
+  showParagraph : boolean = true;
+
   constructor() { }
 
   ngOnInit(): void {

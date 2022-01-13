@@ -1,1 +1,19 @@
-<h4 app-highlight>This will be highlighted by Directive </h4>
+<h4 app-highlight [favColor]="'yellow'">
+  This will be highlighted by Directive
+</h4>
+
+<button (click)="showParagraph = !showParagraph">Toggle</button>
+
+<p *ngIf="showParagraph">Toggling the content</p>
+
+<ng-template [ngIf]="showParagraph">
+  <p>Toggling the content</p>
+</ng-template>
+
+<p *appUnless="!showParagraph">
+  Unless directive in action
+</p>
+
+<ng-template [appUnless]="!showParagraph">
+  <p>Unless directive in action</p>
+</ng-template>
