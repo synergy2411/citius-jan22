@@ -13,6 +13,8 @@ import { NoteItemComponent } from './components/notes/note-item/note-item.compon
 import { NoteEditComponent } from './components/notes/note-edit/note-edit.component';
 import { CommentItemComponent } from './components/users/comment-item/comment-item.component';
 import { AddCommentComponent } from './components/users/add-comment/add-comment.component';
+import { DirectiveDemoComponent } from './components/directive-demo/directive-demo.component';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [     // Component / Directive / Pipe
@@ -26,7 +28,9 @@ import { AddCommentComponent } from './components/users/add-comment/add-comment.
     NoteItemComponent,
     NoteEditComponent,
     CommentItemComponent,
-    AddCommentComponent
+    AddCommentComponent,
+    DirectiveDemoComponent,
+    HighlightDirective
   ],
   imports: [          // Modules - Built-in or Custom
     BrowserModule,
