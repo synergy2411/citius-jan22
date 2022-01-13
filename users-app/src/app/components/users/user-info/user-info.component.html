@@ -1,11 +1,16 @@
 <!-- <ng-content select="header"></ng-content> -->
-<h5>{{ user.firstName }} {{ user.lastName }}</h5>
 
-<p [ngStyle]="dynamicStyle" *ngIf="user.isWorking; else myTemplate">Income : <span [innerText]="user.income"></span> </p>
+<!-- {{ user | json }} -->
+
+<h5>{{ user.firstName | uppercase }} {{ user.lastName | uppercase}}</h5>
+
+<p [ngStyle]="dynamicStyle" *ngIf="user.isWorking; else myTemplate">
+    Income : <span [innerText]="user.income | currency : 'INR' "></span> </p>
 
 <!-- <p [ngClass]="'my-border'" >Date of Birth : <span [innerHTML]="user.dob"></span> </p> -->
 <!-- <p [ngClass]="['my-border', 'my-feature']" >Date of Birth : <span [innerHTML]="user.dob"></span> </p> -->
-<p [ngClass]="dynamicClass" >Date of Birth : <span [innerHTML]="user.dob"></span>
+<p [ngClass]="dynamicClass" >Date of Birth :
+    <span [innerHTML]="user.dob | date : 'dd-MM-yyyy'"></span>
   <!-- <button class="btn btn-dark btn-sm" (click)="toggleClass()">Toggle</button> -->
 </p>
 
