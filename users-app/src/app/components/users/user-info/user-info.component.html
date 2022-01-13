@@ -1,7 +1,15 @@
 <!-- <ng-content select="header"></ng-content> -->
 <h5>{{ user.firstName }} {{ user.lastName }}</h5>
-<p *ngIf="user.isWorking; else myTemplate">Income : <span [innerText]="user.income"></span> </p>
-<p>Date of Birth : <span [innerHTML]="user.dob"></span> </p>
+
+<p [ngStyle]="dynamicStyle" *ngIf="user.isWorking; else myTemplate">Income : <span [innerText]="user.income"></span> </p>
+
+<!-- <p [ngClass]="'my-border'" >Date of Birth : <span [innerHTML]="user.dob"></span> </p> -->
+<!-- <p [ngClass]="['my-border', 'my-feature']" >Date of Birth : <span [innerHTML]="user.dob"></span> </p> -->
+<p [ngClass]="dynamicClass" >Date of Birth : <span [innerHTML]="user.dob"></span>
+  <!-- <button class="btn btn-dark btn-sm" (click)="toggleClass()">Toggle</button> -->
+</p>
+
+
 <p>Total Votes : {{ user.votes }}
   <input type="number" [value]="user.votes"
     (change)="changeUserVotes($event)">
@@ -14,10 +22,10 @@
 
 <ul class="nav nav-tabs">
   <li class="nav-item">
-    <a class="nav-link" (click)="tab = 1">Comments</a>
+    <a class="nav-link my-cursor" [ngClass]="{active : tab === 1}"  (click)="tab = 1">Comments</a>
   </li>
     <li class="nav-item">
-      <a class="nav-link" (click)="tab = 2">Add New Comment</a>
+      <a class="nav-link my-cursor" [ngClass]="{active : tab === 2}"  (click)="tab = 2">Add New Comment</a>
     </li>
 </ul>
 

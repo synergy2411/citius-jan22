@@ -13,6 +13,18 @@ export class UserInfoComponent {
 
    tab : number = 0;
 
+   dynamicClass = {'my-border' : true, 'my-feature' : false }
+
+   dynamicStyle = {
+    'text-decoration': 'underline',
+    'border' : '2px red dashed'
+   }
+
+   toggleClass(){
+     this.dynamicClass['my-border'] = !this.dynamicClass['my-border']
+     this.dynamicClass['my-feature'] = !this.dynamicClass['my-feature']
+   }
+
    changeUserVotes(event : {target : HTMLInputElement}){
      this.user.votes = Number(event.target.value)
    }
