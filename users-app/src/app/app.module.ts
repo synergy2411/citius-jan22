@@ -11,6 +11,8 @@ import { LifeCycleDemoComponent } from './components/life-cycle-demo/life-cycle-
 import { NotesComponent } from './components/notes/notes.component';
 import { NoteItemComponent } from './components/notes/note-item/note-item.component';
 import { NoteEditComponent } from './components/notes/note-edit/note-edit.component';
+import { CommentItemComponent } from './components/users/comment-item/comment-item.component';
+import { AddCommentComponent } from './components/users/add-comment/add-comment.component';
 
 @NgModule({
   declarations: [     // Component / Directive / Pipe
@@ -22,7 +24,9 @@ import { NoteEditComponent } from './components/notes/note-edit/note-edit.compon
     LifeCycleDemoComponent,
     NotesComponent,
     NoteItemComponent,
-    NoteEditComponent
+    NoteEditComponent,
+    CommentItemComponent,
+    AddCommentComponent
   ],
   imports: [          // Modules - Built-in or Custom
     BrowserModule,

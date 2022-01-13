@@ -1,0 +1,40 @@
+<div class="card">
+  <div class="card-body">
+    <form>
+      <!-- stars -->
+      <div class="form-group">
+        <label for="stars">Stars :</label>
+        <select class="form-control" name="selStars" [(ngModel)] = "comment.stars">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+      <!-- body -->
+      <div class="form-group">
+        <textarea name="txtBody" class="form-control"
+          rows="8" placeholder="enter message here"
+          [(ngModel)] = "comment.body"></textarea>
+      </div>
+      <!-- author -->
+      <div class="form-group">
+        <label for="author">Email : </label>
+        <input type="email" name="txtAuthor"
+          class="form-control"
+          [(ngModel)] = "comment.author">
+      </div>
+      <!-- button -->
+      <div class="row">
+        <div class="col-6">
+          <button class="btn btn-primary btn-block" (click)="onAddComment()">Add Comment</button>
+        </div>
+        <div class="col-6">
+          <button class="btn btn-warning btn-block">Cancel</button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</div>
