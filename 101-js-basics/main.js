@@ -322,28 +322,28 @@ const demoPromise = (arr) => {
 }
 
 // Consumer Code
-const callDemoPromise = async () => {
-  try{
-    const result = await demoPromise([1,2])
-    console.log("REsult : ", result)
-    console.log("End")
-  }catch(err){
-    console.log(err)
-  }
-}
+// const callDemoPromise = async () => {
+//   try{
+//     const result = await demoPromise([1,2])
+//     console.log("REsult : ", result)
+//     console.log("End")
+//   }catch(err){
+//     console.log(err)
+//   }
+// }
 
 callDemoPromise();
 
 
 
 
-// demoPromise([1,2,3])
-//   .then(result => {
-//     console.log("Promise Resolved : ", result)
-//     console.log("End")
-//   }).catch(err => {
-//     console.log("ERROR - ", err)
-//   })
+demoPromise([1,2,3])
+  .then(result => {
+    console.log("Promise Resolved : ", result)
+    console.log("End")
+  }).catch(err => {
+    console.log("ERROR - ", err)
+  })
 
 
 
