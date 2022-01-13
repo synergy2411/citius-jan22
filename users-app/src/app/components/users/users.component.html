@@ -1,26 +1,13 @@
-<h4>Users App</h4>
-
 <ul class="list-group">
-  <li class="list-group-item"
-    *ngFor="let user of users; index as i; first as isFirst; even as isEven;">
+  <li class="list-group-item" *ngFor="let user of users;">
     <div class="row">
       <div class="col-4 text-center">
         <app-user-image [user]="user"
           (childEvent)="onMoreInfo($event.lastName, $event.company)"></app-user-image>
       </div>
       <div class="col-8">
-        Index Value : {{ i }} | is this First? {{isFirst}} | is this Even? {{isEven}}
-       <app-user-info [user]="user">
-         <header>Header Info here</header>
-         <main class="main-content">
-          {{ user.firstName }}   {{user.lastName}}
-        </main>
-         <aside>Side bar info</aside>
-         <footer>Footer Info here</footer>
-       </app-user-info>
+       <app-user-info [user]="user"></app-user-info>
       </div>
     </div>
   </li>
 </ul>
-
-<!-- div, p, list,  -->
