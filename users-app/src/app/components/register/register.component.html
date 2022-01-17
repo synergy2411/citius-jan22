@@ -33,11 +33,19 @@
               formControlName="password">
           </div>
           <br>
+          <button class="btn btn-info btn-sm" (click)="addBook()">Add Favorate Books</button>
+          <div formArrayName="books">
+            <div *ngFor="let book of books.controls; index as i">
+              <input type="text" [formControlName]="i" class="form-control">
+            </div>
+          </div>
+          <br>
           <!-- Buttons -->
           <div class="form-group">
             <div class="row">
               <div class="col-6">
                 <button class="btn btn-primary btn-block"
+                  [disabled]="!registrationForm.valid"
                   type="submit">Register</button>
               </div>
               <div class="col-6">
@@ -50,3 +58,30 @@
     </div>
   </div>
 </div>
+
+
+<hr>
+
+<!-- Control in Form Array -->
+<button class="btn btn-dark" (click)="addCourse()">Add New Course</button>
+
+{{courses.value | json}}
+
+<div *ngFor="let control of courses.controls; index as i">
+  <input type="text" [formControl]="courses.controls[i]">
+  <button class="btn btn-sm btn-danger" (click)="removeCourse(i)">Delete</button>
+</div>
+
+
+
+<hr>
+<!-- Form Group in Form Array -->
+{{ hobbies.value | json }}
+<button class="btn btn-secondary" (click)="addHobby()">Add Hobby</button>
+<div *ngFor="let hobby of hobbies.controls">
+  <div [formGroup]="hobby">
+    <input type="text" formControlName="hobbyName"/>
+    <input type="text" formControlName="frequency" />
+  </div>
+</div>
+
