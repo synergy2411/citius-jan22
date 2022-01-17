@@ -259,3 +259,15 @@ fruits = ["apple", "grapes", "banana", "guava"]   // pure change
 - ngValid / ngInvalid
 - ngTouched / ngUntouched
 - ngPristine / ngDirty
+
+
+# Model Driven Form / Reactive Forms
+- Validation on Model
+- Angular Validations
+- ReactiveFormsModules
+- More fine grained control
+- Custom Validations
+- Dynamically generate the form
+- FormControl : individual form control
+- FormGroup : group of individual form controls
+- FormBuilder: build form by grouping all individual form controls
