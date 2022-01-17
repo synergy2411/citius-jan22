@@ -1,42 +1,66 @@
 <div class="row">
-  <div class="col-6 offset-3">
+  <div class="col-xs-10 col-sm-8 col-md-6 offset-xs-1 offset-sm-2 offset-md-3">
     <div class="card">
       <div class="card-header">
         <h5 class="text-center">Login Form</h5>
       </div>
       <div class="card-body">
-        <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)" >
+        <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
           <!-- Email -->
           <div class="form-group">
             <label for="email">Email :</label>
-            <input type="email"
+            <input
+              type="email"
               class="form-control"
               name="email"
               ngModel
               required
-              email>
+              email
+              #email="ngModel"
+            />
+            <div [hidden]="email.valid || email.untouched">
+              <p class="alert alert-danger">* Some problem with email field</p>
+              <div *ngIf="email.errors">
+                <p class="alert alert-danger" [hidden]="!email.errors.required">
+                  - Email is mandatory field
+                </p>
+                <p class="alert alert-danger" [hidden]="!email.errors.email">
+                  - Field should have proper email format
+                </p>
+              </div>
+            </div>
           </div>
           <!-- Password -->
           <div class="form-group">
             <label for="password">Password :</label>
-            <input type="password"
+            <input
+              type="password"
               name="password"
               class="form-control"
               required
               minlength="6"
-              ngModel>
+              ngModel
+            />
           </div>
           <!-- Buttons -->
           <div class="row">
             <div class="col-6">
-              <button class="btn btn-success btn-block"
+              <button
+                class="btn btn-success btn-block"
                 type="submit"
-                [disabled]="loginForm.invalid">Login</button>
+                [disabled]="loginForm.invalid"
+              >
+                Login
+              </button>
             </div>
             <div class="col-6">
-              <button class="btn btn-warning btn-block"
+              <button
+                class="btn btn-warning btn-block"
                 type="button"
-                (click)="onReset(loginForm)">Reset</button>
+                (click)="onReset(loginForm)"
+              >
+                Reset
+              </button>
             </div>
           </div>
         </form>
