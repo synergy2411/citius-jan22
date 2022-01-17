@@ -19,6 +19,8 @@ export class PipeDemoComponent {
     { label: 'insurance', status: 'completed' },
   ];
 
+  orderType : string = "ASC";
+
   promise = new Promise((resolve, reject) => {
     // Remote Server Call
     setTimeout(() => {

@@ -19,11 +19,17 @@
     <button class="btn btn-primary btn-block" (click)="onAddNewTodo()">Add Todo</button>
   </div>
 </div>
-
+<button class="btn btn-success" (click)="orderType = orderType === 'ASC' ? 'DESC' : 'ASC'">
+  {{orderType === "ASC" ? "DESCENDING" : "ASCENDING"}}</button>
 <br>
 
-<ul class="list-group">
-  <li *ngFor="let todo of todoCollection | filter : filteredStatus" class="list-group-item">
+<ul class="list-group" *ngIf="todoCollection.length !== 0; else elseTemplate">
+  <!-- <li *ngFor="let todo of todoCollection | filter : filteredStatus" class="list-group-item"> -->
+  <li *ngFor="let todo of todoCollection | sort : orderType" class="list-group-item">
     {{todo.label}} <span class="float-right badge badge-primary">{{todo.status}}</span>
   </li>
 </ul>
+
+<ng-template #elseTemplate>
+  No Item found
+</ng-template>
