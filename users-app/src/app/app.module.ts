@@ -17,6 +17,7 @@ import { DirectiveDemoComponent } from './components/directive-demo/directive-de
 import { HighlightDirective } from './directives/highlight.directive';
 import { UnlessDirective } from './directives/unless.directive';
 import { PipeDemoComponent } from './components/pipe-demo/pipe-demo.component';
+import { CountryCode } from './pipes/country-code.pipe';
 
 @NgModule({
   declarations: [     // Component / Directive / Pipe
@@ -34,7 +35,8 @@ import { PipeDemoComponent } from './components/pipe-demo/pipe-demo.component';
     DirectiveDemoComponent,
     HighlightDirective,
     UnlessDirective,
-    PipeDemoComponent
+    PipeDemoComponent,
+    CountryCode
   ],
   imports: [          // Modules - Built-in or Custom
     BrowserModule,

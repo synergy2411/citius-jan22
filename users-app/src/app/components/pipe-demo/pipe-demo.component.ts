@@ -9,6 +9,8 @@ export class PipeDemoComponent {
 
   someData = "Some data";
 
+  contactNumber = 987654321;
+
   promise = new Promise((resolve, reject) => {
     // Remote Server Call
     setTimeout(() => {
