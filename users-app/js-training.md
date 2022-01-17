@@ -232,3 +232,23 @@ user-info
 - users comp : Parent / Container / Smart
 - user-image : Child / Presentational / Dump
 - user-info : Child / Presentational / Dump
+
+
+
+const user = {
+  name : "Foo"
+}
+
+Impure Change
+user.name = "Bar;
+
+Pure Change
+user = {
+  name : "Bam
+}
+
+const fruits = ["apple", "grapes", "banana"];
+
+fruits.push("guava");     // impure change
+
+fruits = ["apple", "grapes", "banana", "guava"]   // pure change

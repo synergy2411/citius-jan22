@@ -5,3 +5,25 @@
 <h5>Some Data : {{ someData | uppercase | lowercase  }} </h5>
 
 <h5>Conatct Number : {{ contactNumber | countryCode : 'USA' }} </h5>
+
+<hr>
+
+<div class="row">
+  <div class="col-6">
+    <select name="selTodo" class="form-control" [(ngModel)]="filteredStatus">
+      <option value="pending">Pending Task</option>
+      <option value="completed">Completed Task</option>
+    </select>
+  </div>
+  <div class="col-6">
+    <button class="btn btn-primary btn-block" (click)="onAddNewTodo()">Add Todo</button>
+  </div>
+</div>
+
+<br>
+
+<ul class="list-group">
+  <li *ngFor="let todo of todoCollection | filter : filteredStatus" class="list-group-item">
+    {{todo.label}} <span class="float-right badge badge-primary">{{todo.status}}</span>
+  </li>
+</ul>

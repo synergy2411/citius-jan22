@@ -14,3 +14,6 @@ export class CountryCode implements PipeTransform{
     }
   }
 }
+
+
+// Create a pipe which will reverse the string;
