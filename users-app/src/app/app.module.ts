@@ -20,6 +20,7 @@ import { PipeDemoComponent } from './components/pipe-demo/pipe-demo.component';
 import { CountryCode } from './pipes/country-code.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
 import { SortPipe } from './pipes/sort.pipe';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [     // Component / Directive / Pipe
@@ -40,7 +41,8 @@ import { SortPipe } from './pipes/sort.pipe';
     PipeDemoComponent,
     CountryCode,
     FilterPipe,
-    SortPipe
+    SortPipe,
+    LoginComponent
   ],
   imports: [          // Modules - Built-in or Custom
     BrowserModule,

@@ -252,3 +252,10 @@ const fruits = ["apple", "grapes", "banana"];
 fruits.push("guava");     // impure change
 
 fruits = ["apple", "grapes", "banana", "guava"]   // pure change
+
+
+
+# Angular Forms - States and Classes - Form & Form Control
+- ngValid / ngInvalid
+- ngTouched / ngUntouched
+- ngPristine / ngDirty
