@@ -13,6 +13,16 @@
               name="username"
               class="form-control"
               formControlName="username">
+            <div class="alert alert-danger" [hidden]="username.valid || username.untouched">
+                <p>* Some problem with username field</p>
+                <p [hidden]="!username.hasError('required')">
+                  - Username is mandatory filed
+                </p>
+                <p [hidden]="!username.hasError('email')">
+                  - Username should be in proper email format
+                </p>
+            </div>
+
           </div>
           <!-- Password -->
           <div class="form-group">
