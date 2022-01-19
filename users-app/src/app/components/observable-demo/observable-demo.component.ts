@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { interval, from, of, Subscription } from 'rxjs';
+import { interval, from, of, Subscription, fromEvent } from 'rxjs';
 
 @Component({
   selector: 'app-observable-demo',
