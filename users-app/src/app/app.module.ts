@@ -25,6 +25,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { UserService } from './services/user.service';
 import { CounterComponent } from './components/counter/counter.component';
 import { ObservableDemoComponent } from './components/observable-demo/observable-demo.component';
+import { ObsOperatorsDemoComponent } from './components/obs-operators-demo/obs-operators-demo.component';
 
 @NgModule({
   declarations: [     // Component / Directive / Pipe
@@ -49,7 +50,8 @@ import { ObservableDemoComponent } from './components/observable-demo/observable
     LoginComponent,
     RegisterComponent,
     CounterComponent,
-    ObservableDemoComponent
+    ObservableDemoComponent,
+    ObsOperatorsDemoComponent
   ],
   imports: [          // Modules - Built-in or Custom
     BrowserModule,
