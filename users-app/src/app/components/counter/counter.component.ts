@@ -21,4 +21,8 @@ export class CounterComponent implements OnInit {
     this.counterService.increaseCounter();
   }
 
+  onReset(){
+    this.counterService.counter = 0;
+  }
+
 }

@@ -284,3 +284,14 @@ fruits = ["apple", "grapes", "banana", "guava"]   // pure change
 - User Type : Radio button (Admin | Employee)
 - TnC - Checkbox
 - skills - FormArray - inside form group
+
+
+
+# Service 
+- Dependency Injection
+- Singleton 
+
+# Hierarchical Injection Tree
+- Root Module : Singleton instance available application-wide
+- Root Component : Singleton instance available in Root Component and other child components, other services will NOT receive the same singleton instance
+- Other Component : Singleton instance available in self and child components only.

@@ -24,6 +24,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { UserService } from './services/user.service';
 import { CounterComponent } from './components/counter/counter.component';
+import { ObservableDemoComponent } from './components/observable-demo/observable-demo.component';
 
 @NgModule({
   declarations: [     // Component / Directive / Pipe
@@ -47,7 +48,8 @@ import { CounterComponent } from './components/counter/counter.component';
     SortPipe,
     LoginComponent,
     RegisterComponent,
-    CounterComponent
+    CounterComponent,
+    ObservableDemoComponent
   ],
   imports: [          // Modules - Built-in or Custom
     BrowserModule,
