@@ -57,7 +57,7 @@ export class RegisterComponent implements OnInit {
   }
 
   addBook(){
-    this.books.push(new FormControl(''))
+    this.books.push(new FormControl('', [Validators.required]))
   }
 
 

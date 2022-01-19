@@ -1,20 +1,22 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { User } from 'src/app/model/user.model';
-import { USER_DATA } from '../../model/mocks';
+import { UserService } from 'src/app/services/user.service';
+
 
 @Component({
   selector : "app-users",
   templateUrl : `./users.component.html`,
   styleUrls : [`./users.component.css`],
-  encapsulation : ViewEncapsulation.Emulated
+  encapsulation : ViewEncapsulation.Emulated,
+  providers :   []
 })
 export class UsersComponent implements OnInit{
   users : User[];
 
-  constructor(){}
+  constructor(private userService : UserService){}
 
   ngOnInit(): void {
-      this.users = USER_DATA;
+    this.users = this.userService.getUserData()
   }
 
   onMoreInfo(lastName : string, company : string){

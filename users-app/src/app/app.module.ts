@@ -22,6 +22,7 @@ import { FilterPipe } from './pipes/filter.pipe';
 import { SortPipe } from './pipes/sort.pipe';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { UserService } from './services/user.service';
 
 @NgModule({
   declarations: [     // Component / Directive / Pipe
@@ -51,7 +52,7 @@ import { RegisterComponent } from './components/register/register.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],      // Service Registration
+  providers: [UserService],      // Service Registration
   bootstrap: [AppComponent]
 })
 export class AppModule { }

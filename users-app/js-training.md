@@ -271,3 +271,16 @@ fruits = ["apple", "grapes", "banana", "guava"]   // pure change
 - FormControl : individual form control
 - FormGroup : group of individual form controls
 - FormBuilder: build form by grouping all individual form controls
+
+
+# Model Driven Form
+
+- firstName - input
+- lastName - input
+- email - email
+- password - password field
+- confirm password
+- country - selectbox
+- User Type : Radio button (Admin | Employee)
+- TnC - Checkbox
+- skills - FormArray - inside form group
