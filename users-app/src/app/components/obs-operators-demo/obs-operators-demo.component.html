@@ -1,3 +1,12 @@
 <p>obs-operators-demo works!</p>
 
 <button class="btn btn-primary" #btnTakeUntil>Take Until Click</button>
+
+<br>
+Search : <input type="text" #search>
+<hr>
+<ul>
+  <li *ngFor="let repo of repoNames">
+    {{ repo }}
+  </li>
+</ul>
