@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'any'
 })
 export class CounterService {
+
+  subject = new Subject();
 
   private _counter = 0;
 
@@ -15,8 +18,17 @@ export class CounterService {
   }
 
   increaseCounter(){
-    this._counter++;
+    // this._counter++;
+    this.subject.next(this._counter++)
   }
 
-  constructor() { }
+  constructor() {
+    this.subject.next(this._counter);
+  }
+
+  getCounter(){
+    return this.subject;
+  }
+
+
 }
