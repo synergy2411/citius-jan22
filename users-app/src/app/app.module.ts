@@ -23,6 +23,7 @@ import { SortPipe } from './pipes/sort.pipe';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { UserService } from './services/user.service';
+import { CounterComponent } from './components/counter/counter.component';
 
 @NgModule({
   declarations: [     // Component / Directive / Pipe
@@ -45,14 +46,15 @@ import { UserService } from './services/user.service';
     FilterPipe,
     SortPipe,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    CounterComponent
   ],
   imports: [          // Modules - Built-in or Custom
     BrowserModule,
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [UserService],      // Service Registration
+  providers: [],      // Service Registration
   bootstrap: [AppComponent]
 })
 export class AppModule { }
