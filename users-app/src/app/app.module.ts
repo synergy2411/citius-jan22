@@ -30,6 +30,7 @@ import { ObsOperatorsDemoComponent } from './components/obs-operators-demo/obs-o
 import { SubjectsDemoComponent } from './components/subjects-demo/subjects-demo.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { NewPostComponent } from './components/posts/new-post/new-post.component';
+import { EditPostComponent } from './components/posts/edit-post/edit-post.component';
 
 @NgModule({
   declarations: [     // Component / Directive / Pipe
@@ -58,7 +59,8 @@ import { NewPostComponent } from './components/posts/new-post/new-post.component
     ObsOperatorsDemoComponent,
     SubjectsDemoComponent,
     PostsComponent,
-    NewPostComponent
+    NewPostComponent,
+    EditPostComponent
   ],
   imports: [          // Modules - Built-in or Custom
     BrowserModule,

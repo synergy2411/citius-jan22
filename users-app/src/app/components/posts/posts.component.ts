@@ -11,6 +11,7 @@ export class PostsComponent implements OnInit {
 
   posts : Post[];
   showNewPost : boolean = false;
+  selectedPost : Post;
 
   constructor(private postService : PostService) { }
 
@@ -31,6 +32,10 @@ export class PostsComponent implements OnInit {
         this.getPosts();
         this.showNewPost = false;
       })
+  }
+
+  onPostSelect(post :Post){
+    this.selectedPost = post;
   }
 
 }

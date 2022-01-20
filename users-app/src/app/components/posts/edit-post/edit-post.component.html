@@ -1,0 +1,32 @@
+<div class="backdrop">
+  <div class="row">
+    <div class="col-6 offset-3">
+      <div class="card">
+        <div class="card-header">
+          <h6 class="text-center">{{post.title | uppercase}}</h6>
+        </div>
+        <div class="card-body">
+          <input type="text" class="form-control" [(ngModel)]="post.body">
+
+          <br>
+          <div class="form-check" *ngIf="!post.published">
+            <input type="checkbox" class="form-check-input"
+              name="isPublished" [(ngModel)]="post.published" id="isPublished">
+              <label for="isPublished" class="form-check-label"> Check to publish the post</label>
+          </div>
+
+          <br>
+          <div class="row">
+            <div class="col-6">
+              <button class="btn btn-danger btn-block"
+                (click)="onDelete()">Delete</button>
+            </div>
+            <div class="col-6">
+              <button class="btn btn-success btn-block" (click)="onEdit()">Edit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

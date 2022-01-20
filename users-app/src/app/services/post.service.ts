@@ -21,5 +21,12 @@ export class PostService {
     return this.http.post(`${this.baseURL}/posts`, post)
   }
 
+  deletePost(id: string){
+    return this.http.delete(`${this.baseURL}/posts/${id}`)
+  }
+
+  editPost(id : string, body : string, published : boolean){
+    return this.http.patch(`${this.baseURL}/posts/${id}`,{body, published})
+  }
 
 }
