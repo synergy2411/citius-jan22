@@ -1,10 +1,28 @@
 {
   "posts": [
     {
+      "title": "shopping",
+      "body": "to buy the jeans",
+      "id": "aa471531-e4bd-4695-b3de-8d23d38ae5ef",
+      "published": false
+    },
+    {
       "title": "grocery",
-      "body": "to buy pulses",
-      "id": "255357ff-f0b1-4f1d-a8da-1bd0c2182901",
-      "published": true
+      "body": "to buy the pulses",
+      "id": "1353b558-fa9c-4cc8-b8e2-ddb7c140adac",
+      "published": false
+    },
+    {
+      "title": "plants",
+      "body": "to pot new plants",
+      "id": "9458f1b2-5997-4203-b461-adc87a2267af",
+      "published": false
+    },
+    {
+      "title": "insurance",
+      "body": "to renew bike insrance",
+      "id": "3adab64c-bedd-47f3-afab-223f40cc839b",
+      "published": false
     }
   ]
 }

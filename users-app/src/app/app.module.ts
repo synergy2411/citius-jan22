@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { UsersComponent } from './components/users/users.component';
@@ -31,6 +31,8 @@ import { SubjectsDemoComponent } from './components/subjects-demo/subjects-demo.
 import { PostsComponent } from './components/posts/posts.component';
 import { NewPostComponent } from './components/posts/new-post/new-post.component';
 import { EditPostComponent } from './components/posts/edit-post/edit-post.component';
+import { RequestInterceptor } from './services/request.interceptor';
+import { ResponseInterceptor } from './services/response.interceptor';
 
 @NgModule({
   declarations: [     // Component / Directive / Pipe
@@ -68,7 +70,15 @@ import { EditPostComponent } from './components/posts/edit-post/edit-post.compon
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],      // Service Registration
+  providers: [ {
+    provide : HTTP_INTERCEPTORS,
+    useClass : RequestInterceptor,
+    multi : true
+  },{
+    provide : HTTP_INTERCEPTORS,
+    useClass : ResponseInterceptor,
+    multi : true
+  } ],      // Service Registration
   bootstrap: [AppComponent]
 })
 export class AppModule { }

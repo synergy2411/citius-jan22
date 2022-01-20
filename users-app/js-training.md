@@ -319,3 +319,21 @@ fruits = ["apple", "grapes", "banana", "guava"]   // pure change
 # PostService : Create, Read, Update, Delete
 
 # Post Model - id, title, body, published
+
+
+
+# Observables
+- Sync and Async
+- Are Cancelable
+- Emit the series of data/event
+- Observer the data source
+- No over under-fetching / under-fetching
+- Pipeable Operators
+
+
+# Promises
+- Always Async
+- Can NOT cancel
+- returns one value
+- one shot
+- Over-fetching
