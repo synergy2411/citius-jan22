@@ -23,7 +23,10 @@ export class PostsComponent implements OnInit {
     this.postService.getPosts()
       .subscribe({
         next : posts => this.posts = posts,
-        error : err => {throw err},
+        error : err => {
+          console.log("Error Caught in Component");
+          throw err;
+        },
         complete :  () => console.log("COMPLETED")
       })
 

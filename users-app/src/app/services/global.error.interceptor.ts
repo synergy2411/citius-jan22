@@ -8,6 +8,7 @@ export class GlobalErrorInterceptor implements HttpInterceptor{
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     return next.handle(req)
       .pipe(catchError(err => {
+        console.log("Error caught in Interceptor")
         if(err instanceof HttpErrorResponse){
           switch (err.status) {
             case 401: {

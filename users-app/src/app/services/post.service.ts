@@ -19,7 +19,7 @@ export class PostService {
   getPosts() : Observable<Post[]>{
     return this.http.get<Post[]>(`${this.baseURL}/post`)
       .pipe(catchError(err => {
-        // Handle the error
+        console.log("Error Caught in Service")
         return throwError(err)
       }))
   }
