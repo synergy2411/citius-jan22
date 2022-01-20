@@ -2,16 +2,18 @@ import { Injectable } from '@angular/core';
 import { Post } from '../model/post';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment'
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostService {
 
-  posts = []
-  private baseURL : string =  "http://localhost:3000";
+  baseURL : string;
 
-  constructor(private http : HttpClient) { }
+  constructor(private http : HttpClient) {
+    this.baseURL = environment.JSONServerURL;
+  }
 
   getPosts() : Observable<Post[]>{
     return this.http.get<Post[]>(`${this.baseURL}/posts`)
