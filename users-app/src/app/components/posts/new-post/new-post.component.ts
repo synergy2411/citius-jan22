@@ -12,8 +12,13 @@ export class NewPostComponent implements OnInit {
 
   constructor() { }
   @Output() postEvent = new EventEmitter<Post>()
+  @Output() cancelFormEvent = new EventEmitter<any>()
 
   ngOnInit(): void {
+  }
+
+  onCancelForm(){
+    this.cancelFormEvent.emit();
   }
 
   onAddNewPost(event : Event ,postForm : NgForm){

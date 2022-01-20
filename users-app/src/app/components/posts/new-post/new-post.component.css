@@ -10,8 +10,8 @@
 .my-card{
   position: fixed;
   width: 60vw;
-  height: 30vh;
+  height: 40vh;
   margin-left: 20vw;
-  margin-top: 40vh;
+  margin-top: 30vh;
   z-index: 80%;
 }

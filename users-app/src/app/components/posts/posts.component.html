@@ -17,4 +17,6 @@
   </div>
 </div>
 
-<app-new-post *ngIf="showNewPost" (postEvent) = "onAddNewPost($event)"></app-new-post>
+<app-new-post *ngIf="showNewPost"
+  (postEvent) = "onAddNewPost($event)"
+  (cancelFormEvent) = "showNewPost = false"></app-new-post>
