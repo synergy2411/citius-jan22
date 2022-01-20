@@ -1,0 +1,31 @@
+<div class="backdrop">
+  <div class="row my-card">
+  <div class="col-6 offset-3">
+    <div class="card">
+      <div class="card-body">
+        <form #postForm="ngForm">
+          <div class="form-group">
+            <label for="title">Title :</label>
+            <input type="text" class="form-control" name="title" ngModel required minlength="3" />
+          </div>
+          <div class="form-group">
+            <label for="body">Body :</label>
+            <input type="text" class="form-control" name="body" ngModel required minlength="6"/>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-6">
+              <button class="btn btn-sm btn-primary btn-block"
+               [disabled]="postForm.invalid"
+               type="button"
+               (click)="onAddNewPost($event, postForm)">Add Post</button>
+            </div>
+            <div class="col-6">
+              <button class="btn btn-sm btn-warning btn-block" type="button">Cancel</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
