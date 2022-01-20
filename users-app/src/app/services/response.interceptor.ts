@@ -8,7 +8,7 @@ export class ResponseInterceptor implements HttpInterceptor{
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     return next.handle(req)
       .pipe(tap(response => {
-        alert("[RESPONSE INTERCEPTOR] \n"+  JSON.stringify(response));
+        console.log("[RESPONSE INTERCEPTOR] \n"+  JSON.stringify(response));
       }))
   }
 }

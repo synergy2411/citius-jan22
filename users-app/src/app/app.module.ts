@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { ErrorHandler, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
@@ -33,6 +33,8 @@ import { NewPostComponent } from './components/posts/new-post/new-post.component
 import { EditPostComponent } from './components/posts/edit-post/edit-post.component';
 import { RequestInterceptor } from './services/request.interceptor';
 import { ResponseInterceptor } from './services/response.interceptor';
+import { GlobalErrorInterceptor } from './services/global.error.interceptor';
+import { GlobalHttpErrorHandlerService } from './services/global-error-handler.service';
 
 @NgModule({
   declarations: [     // Component / Directive / Pipe
@@ -78,6 +80,13 @@ import { ResponseInterceptor } from './services/response.interceptor';
     provide : HTTP_INTERCEPTORS,
     useClass : ResponseInterceptor,
     multi : true
+  },{
+    provide : HTTP_INTERCEPTORS,
+    useClass : GlobalErrorInterceptor,
+    multi : true
+  },{
+    provide : ErrorHandler,
+    useClass : GlobalHttpErrorHandlerService
   } ],      // Service Registration
   bootstrap: [AppComponent]
 })

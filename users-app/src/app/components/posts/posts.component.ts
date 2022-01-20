@@ -21,9 +21,12 @@ export class PostsComponent implements OnInit {
 
   private getPosts(){
     this.postService.getPosts()
-      .subscribe(posts => {
-        this.posts = posts;
+      .subscribe({
+        next : posts => this.posts = posts,
+        error : err => {throw err},
+        complete :  () => console.log("COMPLETED")
       })
+
   }
 
   onAddNewPost(newPost : Post){
