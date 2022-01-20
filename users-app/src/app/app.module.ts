@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { UsersComponent } from './components/users/users.component';
@@ -27,6 +28,7 @@ import { CounterComponent } from './components/counter/counter.component';
 import { ObservableDemoComponent } from './components/observable-demo/observable-demo.component';
 import { ObsOperatorsDemoComponent } from './components/obs-operators-demo/obs-operators-demo.component';
 import { SubjectsDemoComponent } from './components/subjects-demo/subjects-demo.component';
+import { PostsComponent } from './components/posts/posts.component';
 
 @NgModule({
   declarations: [     // Component / Directive / Pipe
@@ -53,12 +55,14 @@ import { SubjectsDemoComponent } from './components/subjects-demo/subjects-demo.
     CounterComponent,
     ObservableDemoComponent,
     ObsOperatorsDemoComponent,
-    SubjectsDemoComponent
+    SubjectsDemoComponent,
+    PostsComponent
   ],
   imports: [          // Modules - Built-in or Custom
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],      // Service Registration
   bootstrap: [AppComponent]

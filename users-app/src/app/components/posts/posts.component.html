@@ -1,0 +1,16 @@
+<p class="disaply-4 text-center">My Post App</p>
+
+<div class="row">
+  <div class="col-6" *ngFor="let post of posts">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="text-center">{{post.title | uppercase}}</h5>
+      </div>
+      <div class="card-body">
+        <div class="card-text">
+          <p>{{post.body}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

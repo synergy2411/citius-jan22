@@ -287,7 +287,8 @@ fruits = ["apple", "grapes", "banana", "guava"]   // pure change
 
 
 
-# Service 
+# Service - ES6 class with @Injectable()
+- business logic
 - Dependency Injection
 - Singleton 
 
@@ -295,3 +296,26 @@ fruits = ["apple", "grapes", "banana", "guava"]   // pure change
 - Root Module : Singleton instance available application-wide
 - Root Component : Singleton instance available in Root Component and other child components, other services will NOT receive the same singleton instance
 - Other Component : Singleton instance available in self and child components only.
+
+
+# Observable
+- Stream on which series of data/events emitted at certain time interval
+- Both Sync as well Async
+- Operators
+- Creational Operators : from, of, fromEvent, interval, Observable
+- Filtering Operators : take, takeUntil, takeWhile, filter, first, skip, last
+- References - rxjs.dev | learnrxjs.io
+- Subject : both observable as well observer (subscribe, pipe, next, error, complete)
+- Subject Types - BehaviourSubject, ReplaySubject, AsyncSubject
+
+
+# Remote Server Calls with HttpClient
+
+# Service Integration with HTTP
+
+# Routing - Creating SPA
+
+
+# PostService : Create, Read, Update, Delete
+
+# Post Model - id, title, body, published
