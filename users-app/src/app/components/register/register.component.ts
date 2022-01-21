@@ -63,6 +63,8 @@ export class RegisterComponent implements OnInit {
 
   onRegister(){
     console.log(this.registrationForm);
+    const { username, password } = this.registrationForm.value;
+    localStorage.setItem("loggedIn", JSON.stringify({username, password}))
   }
 
   ngOnInit(): void {
