@@ -35,6 +35,9 @@ export const APP_ROUTES : Routes = [
     component : PostsComponent,
     resolve : {posts : PostsResolveService}
   },{
+    path : "lazy",
+    loadChildren : () => import("./modules/lazy/lazy.module").then(m => m.LazyModule)
+  },{
     path : "product",
     component : ProductsComponent,
     children : [

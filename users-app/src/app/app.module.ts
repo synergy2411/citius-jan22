@@ -42,6 +42,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ProductsComponent } from './components/products/products.component';
 import { OverviewComponent } from './components/products/overview/overview.component';
 import { SpecificationComponent } from './components/products/specification/specification.component';
+import { LazyModule } from './modules/lazy/lazy.module';
 
 @NgModule({
   declarations: [     // Component / Directive / Pipe
