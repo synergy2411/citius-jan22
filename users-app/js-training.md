@@ -366,3 +366,5 @@ fruits = ["apple", "grapes", "banana", "guava"]   // pure change
 - CanActivate : allow / does not allow to enter the route
 - CanDeactivate : allow / does not allow to leave the route
 - Resolve : pre-populate the data into component
+
+> ng g m modules/lazy
