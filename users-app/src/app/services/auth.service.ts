@@ -1,11 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { v4 } from 'uuid';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
+
+  private token = null;
+
   constructor(private router: Router) {}
 
   register(email: string, password: string) {
@@ -24,6 +28,8 @@ export class AuthService {
         const userObj = JSON.parse(user);
         const { email: userEmail, password: userPassword } = userObj;
         if (email === userEmail && password === userPassword) {
+          this.token = v4()
+          console.log("TOKEN - ", this.token)
           observer.next({ message: 'SUCCESS' });
         }
       } else {
@@ -31,4 +37,14 @@ export class AuthService {
       }
     });
   }
+
+  isAuthenticated(){
+    return this.token != null;
+  }
+
+  onLogout(){
+    localStorage.clear();
+    this.token = null;
+  }
+
 }
