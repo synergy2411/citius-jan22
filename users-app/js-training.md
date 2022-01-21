@@ -362,3 +362,4 @@ fruits = ["apple", "grapes", "banana", "guava"]   // pure change
 - RouterOutlet : provides the space to load the component template
 - RouterLink : prevent the page reload, bind dynamically
 - Router Class : programmatically naviagte the user
+- ActivatedRoute : access the activated URL/Route

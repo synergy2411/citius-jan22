@@ -28,7 +28,7 @@ export const APP_ROUTES : Routes = [
     path : "product",
     component : ProductsComponent,
     children : [
-      {path : "overview", component : OverviewComponent},
+      {path : "overview/:id/:prodName", component : OverviewComponent},
       {path : "specification", component: SpecificationComponent}
     ]
   },{
