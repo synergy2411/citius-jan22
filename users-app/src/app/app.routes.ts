@@ -6,6 +6,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { SpecificationComponent } from './components/products/specification/specification.component';
 import { RegisterComponent } from './components/register/register.component';
 import { UsersComponent } from './components/users/users.component';
+import { DeactivatedRouteService } from './services/deactivated-route.service';
 import { LoginGaurdService } from './services/login-gaurd.service';
 
 export const APP_ROUTES : Routes = [
@@ -15,7 +16,8 @@ export const APP_ROUTES : Routes = [
     pathMatch : 'full'
   },{
     path : "register",
-    component : RegisterComponent
+    component : RegisterComponent,
+    canDeactivate : [DeactivatedRouteService]
   },{
     path : "login",              // http://localhost:4200/login
     component : LoginComponent

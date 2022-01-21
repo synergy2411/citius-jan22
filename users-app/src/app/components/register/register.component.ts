@@ -80,4 +80,8 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  shouldLeave(){
+    return confirm("Are you sure to leave this page?") ? true : false;
+  }
+
 }
