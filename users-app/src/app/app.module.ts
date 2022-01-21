@@ -38,6 +38,9 @@ import { GlobalErrorInterceptor } from './services/global.error.interceptor';
 import { GlobalHttpErrorHandlerService } from './services/global-error-handler.service';
 import { APP_ROUTES } from './app.routes';
 import { HeaderComponent } from './components/header/header.component';
+import { ProductsComponent } from './components/products/products.component';
+import { OverviewComponent } from './components/products/overview/overview.component';
+import { SpecificationComponent } from './components/products/specification/specification.component';
 
 @NgModule({
   declarations: [     // Component / Directive / Pipe
@@ -68,7 +71,10 @@ import { HeaderComponent } from './components/header/header.component';
     PostsComponent,
     NewPostComponent,
     EditPostComponent,
-    HeaderComponent
+    HeaderComponent,
+    ProductsComponent,
+    OverviewComponent,
+    SpecificationComponent
   ],
   imports: [          // Modules - Built-in or Custom
     BrowserModule,

@@ -1,0 +1,18 @@
+<p class="display-4 text-center">Product Component loaded!</p>
+
+<div class="row">
+  <div class="col-4">
+    <ul class="list-group">
+      <li class="list-group-item">
+        <a [routerLink]="['overview']">Overview</a>
+      </li>
+      <li class="list-group-item">
+        <a [routerLink]="['specification']">Specification</a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-8">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
