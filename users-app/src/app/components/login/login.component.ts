@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -9,24 +10,22 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router : Router) { }
+  constructor(
+    private router : Router,
+    private authService : AuthService) { }
 
   ngOnInit(): void {
   }
 
   onSubmit(loginForm : NgForm){
     console.log(loginForm);
-    const { email, password } = loginForm.value;
-    const user = localStorage.getItem("loggedIn")
-    if(user){
-      const userObj = JSON.parse(user)
-      const { username, password } = userObj;
-      if(username === email && password === password){
-        this.router.navigate(['/users'])
-      }
-    }else{
-      alert("Please register first...")
-    }
+    const {email, password} = loginForm.value;
+    this.authService.onLogin(email, password)
+      .subscribe((response : any) => {
+        if(response.message === "SUCCESS"){
+          this.router.navigate(['/users'])
+        }
+      })
   }
 
   onReset(loginForm : NgForm){

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -44,7 +46,10 @@ export class RegisterComponent implements OnInit {
     return hasExcl ? null : {hasExclamation : true}
   }
 
-  constructor(private fb : FormBuilder) {
+  constructor(
+      private fb : FormBuilder,
+      private authService : AuthService,
+      private router : Router) {
     this.registrationForm = this.fb.group({
       username : this.username,
       password : this.password,
@@ -64,7 +69,12 @@ export class RegisterComponent implements OnInit {
   onRegister(){
     console.log(this.registrationForm);
     const { username, password } = this.registrationForm.value;
-    localStorage.setItem("loggedIn", JSON.stringify({username, password}))
+    this.authService.register(username, password)
+      .then((response : any) => {
+        if(response.message === "SUCCESS"){
+          this.router.navigate(['/login'])
+        }
+      });
   }
 
   ngOnInit(): void {
