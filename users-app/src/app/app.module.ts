@@ -37,6 +37,7 @@ import { ResponseInterceptor } from './services/response.interceptor';
 import { GlobalErrorInterceptor } from './services/global.error.interceptor';
 import { GlobalHttpErrorHandlerService } from './services/global-error-handler.service';
 import { APP_ROUTES } from './app.routes';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [     // Component / Directive / Pipe
@@ -66,7 +67,8 @@ import { APP_ROUTES } from './app.routes';
     SubjectsDemoComponent,
     PostsComponent,
     NewPostComponent,
-    EditPostComponent
+    EditPostComponent,
+    HeaderComponent
   ],
   imports: [          // Modules - Built-in or Custom
     BrowserModule,

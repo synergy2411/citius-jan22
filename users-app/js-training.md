@@ -360,3 +360,4 @@ fruits = ["apple", "grapes", "banana", "guava"]   // pure change
 - Routes : Configure the route for App
 - RouterModule : Supply the Routes for App
 - RouterOutlet : provides the space to load the component template
+- RouterLink : prevent the page reload, bind dynamically
