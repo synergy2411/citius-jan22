@@ -361,5 +361,8 @@ fruits = ["apple", "grapes", "banana", "guava"]   // pure change
 - RouterModule : Supply the Routes for App
 - RouterOutlet : provides the space to load the component template
 - RouterLink : prevent the page reload, bind dynamically
-- Router Class : programmatically naviagte the user
+- Router Class : programmatically navigate the user
 - ActivatedRoute : access the activated URL/Route
+- CanActivate : allow / does not allow to enter the route
+- CanDeactivate : allow / does not allow to leave the route
+- Resolve : pre-populate the data into component
