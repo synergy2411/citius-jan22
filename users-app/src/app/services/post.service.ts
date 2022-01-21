@@ -3,7 +3,7 @@ import { Post } from '../model/post';
 import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { environment } from '../../environments/environment'
-import { catchError } from 'rxjs/operators';
+import { catchError, delay } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -17,11 +17,12 @@ export class PostService {
   }
 
   getPosts() : Observable<Post[]>{
-    return this.http.get<Post[]>(`${this.baseURL}/post`)
+    return this.http.get<Post[]>(`${this.baseURL}/posts`)
       .pipe(catchError(err => {
         console.log("Error Caught in Service")
         return throwError(err)
-      }))
+      }),
+      delay(2000))
   }
 
   createPost(post : Post) : Observable<any>{

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Post } from 'src/app/model/post';
 import { PostService } from 'src/app/services/post.service';
 
@@ -13,10 +14,14 @@ export class PostsComponent implements OnInit {
   showNewPost : boolean = false;
   selectedPost : Post;
 
-  constructor(private postService : PostService) { }
+  constructor(
+    private postService : PostService,
+    private route : ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.getPosts()
+    // this.getPosts()
+    this.posts = this.route.snapshot.data['posts']
+    this.route.data.subscribe(data => console.log("SUBSCRIBE : ", data));
   }
 
   private getPosts(){
