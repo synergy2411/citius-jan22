@@ -337,3 +337,26 @@ fruits = ["apple", "grapes", "banana", "guava"]   // pure change
 - returns one value
 - one shot
 - Over-fetching
+
+
+
+
+
+
+
+
+# Routing - Creating SPA
+- Single Page Apps
+- No page reload/refresh
+- Content will display depending upon the URL
+- All contents get loaded at very first time
+- User interactivity
+- Less network congestion
+- Less Server interaction
+- Reusability
+
+
+# Routing Terminologies
+- Routes : Configure the route for App
+- RouterModule : Supply the Routes for App
+- RouterOutlet : provides the space to load the component template

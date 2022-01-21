@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { UsersComponent } from './components/users/users.component';
@@ -35,6 +36,7 @@ import { RequestInterceptor } from './services/request.interceptor';
 import { ResponseInterceptor } from './services/response.interceptor';
 import { GlobalErrorInterceptor } from './services/global.error.interceptor';
 import { GlobalHttpErrorHandlerService } from './services/global-error-handler.service';
+import { APP_ROUTES } from './app.routes';
 
 @NgModule({
   declarations: [     // Component / Directive / Pipe
@@ -70,7 +72,8 @@ import { GlobalHttpErrorHandlerService } from './services/global-error-handler.s
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(APP_ROUTES)
   ],
   providers: [ {
     provide : HTTP_INTERCEPTORS,
