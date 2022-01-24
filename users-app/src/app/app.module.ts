@@ -40,6 +40,8 @@ import { GlobalHttpErrorHandlerService } from './services/global-error-handler.s
 import { GlobalErrorInterceptor } from './services/global.error.interceptor';
 import { RequestInterceptor } from './services/request.interceptor';
 import { ResponseInterceptor } from './services/response.interceptor';
+import { ParentComponent } from './components/parent/parent.component';
+import { ChildComponent } from './components/child/child.component';
 
 
 @NgModule({
@@ -74,7 +76,9 @@ import { ResponseInterceptor } from './services/response.interceptor';
     HeaderComponent,
     ProductsComponent,
     OverviewComponent,
-    SpecificationComponent
+    SpecificationComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [          // Modules - Built-in or Custom
     BrowserModule,

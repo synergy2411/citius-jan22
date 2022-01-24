@@ -368,3 +368,30 @@ fruits = ["apple", "grapes", "banana", "guava"]   // pure change
 - Resolve : pre-populate the data into component
 
 > ng g m modules/lazy
+
+
+
+> ng new project-app
+> cd project-app
+- package.json file
+> npm install
+
+
+
+
+let user = {
+  name : "Foo"
+}
+
+// Mutable Change
+user = {
+  name : "Bar"
+}
+
+
+// Immutable Change
+user.name = "Baz";
+
+
+
+Parent Comp (user) -> Child Comp (@Input() user; ChangeDetectionStrategy.default)

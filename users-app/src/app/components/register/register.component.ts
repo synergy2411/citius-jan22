@@ -68,6 +68,7 @@ export class RegisterComponent implements OnInit {
 
   onRegister(){
     console.log(this.registrationForm);
+    debugger;
     const { username, password } = this.registrationForm.value;
     this.authService.register(username, password)
       .then((response : any) => {

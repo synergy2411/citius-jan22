@@ -1,0 +1,9 @@
+<h4>Parent Component</h4>
+
+<h4>User name in Parent Comp : {{ user.name }} </h4>
+
+
+<app-child [user]="user"></app-child>
+
+<button class="btn btn-primary" (click)="onChangeRef()">Change the Reference</button>
+<button class="btn btn-success" (click)="onChangeVal()">Change the Value</button>
