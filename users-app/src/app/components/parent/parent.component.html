@@ -7,3 +7,12 @@
 
 <button class="btn btn-primary" (click)="onChangeRef()">Change the Reference</button>
 <button class="btn btn-success" (click)="onChangeVal()">Change the Value</button>
+
+<hr>
+
+<button (click)="onAddFruit()" class="btn btn-primary">Add Fruit</button>
+<ul>
+  <li *ngFor="let fruit of fruits;trackBy : trackById">
+    {{ fruit.name }}
+  </li>
+</ul>

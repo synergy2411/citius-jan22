@@ -10,6 +10,26 @@ export class ParentComponent implements OnInit {
   user = {
     name : "Foo"
   }
+
+  fruits = [
+    {id : 1, name : "apple"},
+    {id : 2, name : "oranges"},
+    {id : 3, name : "guava"},
+  ];
+
+  onAddFruit(){
+    this.fruits = [
+      {id : 1, name : "apple"},
+      {id : 2, name : "oranges"},
+      {id : 3, name : "guava"},
+      {id : 4, name : "kiwi"}
+    ];
+  }
+
+  trackById(id, el){
+    return el.id;
+  }
+
   constructor() { }
 
   ngOnInit(): void {
