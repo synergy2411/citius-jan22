@@ -395,3 +395,17 @@ user.name = "Baz";
 
 
 Parent Comp (user) -> Child Comp (@Input() user; ChangeDetectionStrategy.default)
+
+
+# install local zero config based http server
+- serve : npm install serve -g
+- httpServer : npm install http-server -g
+- cd dist\users-app
+- serve / http-server
+
+
+# Firebase deploymnet Steps
+- npm install -g firebase-tools
+- firebase login
+- firebase init
+- firebase deploy

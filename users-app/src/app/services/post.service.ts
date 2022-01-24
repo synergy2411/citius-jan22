@@ -13,11 +13,13 @@ export class PostService {
   baseURL : string;
 
   constructor(private http : HttpClient) {
-    this.baseURL = environment.JSONServerURL;
+    // this.baseURL = environment.JSONServerURL;
+    this.baseURL = "https://sk-ct-users-app-default-rtdb.firebaseio.com/posts.json";
   }
 
   getPosts() : Observable<Post[]>{
-    return this.http.get<Post[]>(`${this.baseURL}/posts`)
+    // return this.http.get<Post[]>(`${this.baseURL}/posts`)
+    return this.http.get<Post[]>(`${this.baseURL}`)
       .pipe(catchError(err => {
         console.log("Error Caught in Service")
         return throwError(err)
@@ -26,7 +28,7 @@ export class PostService {
   }
 
   createPost(post : Post) : Observable<any>{
-    return this.http.post(`${this.baseURL}/posts`, post)
+    return this.http.post(`${this.baseURL}`, post)
   }
 
   deletePost(id: string){
