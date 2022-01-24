@@ -21,13 +21,13 @@ export class ParentComponent implements OnInit {
     this.fruits = [
       {id : 1, name : "apple"},
       {id : 2, name : "oranges"},
-      {id : 3, name : "guava"},
+      {id : 3, name : "kiwi"},
       {id : 4, name : "kiwi"}
     ];
   }
 
   trackById(id, el){
-    return el.id;
+    return el.name;
   }
 
   constructor() { }

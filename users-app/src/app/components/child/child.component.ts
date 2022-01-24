@@ -1,10 +1,10 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-child',
   templateUrl: './child.component.html',
   styleUrls: ['./child.component.css'],
-  changeDetection : ChangeDetectionStrategy.OnPush
+  // changeDetection : ChangeDetectionStrategy.OnPush
 })
 export class ChildComponent implements OnInit, AfterViewInit {
 
@@ -12,12 +12,18 @@ export class ChildComponent implements OnInit, AfterViewInit {
 
   @Input() user : any;
 
-  constructor() { }
+  constructor(private cdRef : ChangeDetectorRef) { }
+
   ngAfterViewInit(): void {
   //  console.log(this.control.nativeElement);
   }
 
   ngOnInit(): void {
+    this.cdRef.detach()
+  }
+
+  onReattach(){
+    this.cdRef.reattach();
   }
 
 }
